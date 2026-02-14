@@ -1,0 +1,142 @@
+.json-node {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  line-height: 1.8;
+  color: var(--color-text-primary);
+  user-select: text;
+}
+
+.json-node.primitive {
+  display: flex;
+  gap: var(--spacing-sm);
+  padding: 2px 0;
+  align-items: center;
+}
+
+.json-node.object {
+  margin-bottom: var(--spacing-sm);
+}
+
+.node-header {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  padding: 4px;
+  margin: -4px 0;
+  border-radius: 4px;
+  transition: background var(--transition-fast);
+  user-select: none;
+}
+
+.node-header:hover {
+  background: rgba(99, 102, 241, 0.1);
+}
+
+.expand-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  color: var(--color-text-tertiary);
+  flex-shrink: 0;
+}
+
+.expand-icon svg {
+  width: 16px;
+  height: 16px;
+}
+
+.placeholder {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+}
+
+.json-key {
+  color: var(--syntax-key);
+  font-weight: 500;
+  padding: 0 4px;
+}
+
+.json-type {
+  color: var(--color-text-tertiary);
+  font-size: 12px;
+  margin-left: 4px;
+}
+
+.json-value {
+  color: var(--color-text-secondary);
+}
+
+.json-value.string {
+  color: var(--syntax-string);
+}
+
+.json-value.number {
+  color: var(--syntax-number);
+}
+
+.json-value.boolean {
+  color: var(--syntax-boolean);
+  font-weight: 500;
+}
+
+.json-value.object,
+.json-value.function {
+  color: var(--color-text-secondary);
+}
+
+.node-children {
+  padding-left: 0;
+  animation: slideIn var(--transition-base);
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    max-height: 0;
+  }
+  to {
+    opacity: 1;
+    max-height: 1000px;
+  }
+}
+
+.child-node {
+  position: relative;
+}
+
+.child-node::before {
+  content: '';
+  position: absolute;
+  left: 10px;
+  top: -18px;
+  width: 1px;
+  height: 18px;
+  background: var(--color-border);
+  opacity: 0.3;
+}
+
+.child-node:last-child::before {
+  height: 18px;
+}
+
+.node-empty {
+  color: var(--color-text-tertiary);
+  font-style: italic;
+  padding: 4px;
+  display: inline-block;
+}
+
+/* Nested level styling */
+.json-node.primitive {
+  transition: all var(--transition-fast);
+}
+
+.json-node.primitive:hover {
+  background: rgba(99, 102, 241, 0.05);
+  border-radius: 4px;
+  margin: 0 -4px;
+  padding: 0 4px;
+}
