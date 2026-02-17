@@ -54,15 +54,27 @@ npm run preview
 
 ```
 src/
-├── App.jsx              # Main application component
-├── App.css              # App layout styles
-├── index.css            # Global styles and CSS variables
-├── main.jsx             # React entry point
-└── components/
-    ├── JsonPanel.jsx    # Reusable JSON panel component
-    ├── JsonPanel.css    # JsonPanel styles
-    ├── JsonTree.jsx     # Tree visualization component
-    └── JsonTree.css     # JsonTree styles
+├── App.jsx                          # Main application component
+├── main.jsx                         # React entry point
+├── components/
+│   ├── JsonPanel.jsx                # Reusable JSON panel component
+│   ├── JsonTree.jsx                 # Tree visualization component
+│   ├── MappingTable.jsx             # Mapping table component
+│   └── ImplementationPlan.jsx       # Implementation plan component
+├── assets/
+│   └── css/
+│       ├── index.css                # Global styles and CSS variables
+│       ├── App.css                  # App layout styles
+│       ├── JsonPanel.css            # JsonPanel styles
+│       ├── JsonTree.css             # JsonTree styles
+│       ├── MappingTable.css         # MappingTable styles
+│       └── ImplementationPlan.css   # ImplementationPlan styles
+└── __tests__/
+    ├── setup.js                     # Test setup configuration
+    ├── App.test.jsx                 # App component tests
+    ├── JsonPanel.test.jsx           # JsonPanel component tests
+    ├── JsonTree.test.jsx            # JsonTree component tests
+    └── MappingTable.test.jsx        # MappingTable component tests
 ```
 
 ## Components
@@ -108,6 +120,4 @@ The application uses a premium dark theme with:
 - Safari (latest)
 - Edge (latest)
 
-## License
 
-MIT

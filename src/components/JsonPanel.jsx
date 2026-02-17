@@ -1,7 +1,7 @@
 import { useState, useRef, useEffect } from 'react'
 import JsonTree from './JsonTree'
 import { Copy, Check, AlertCircle } from 'lucide-react'
-import './JsonPanel.css'
+import '../assets/css/JsonPanel.css'
 
 function JsonPanel({ title, jsonString, onJsonChange }) {
   const [mode, setMode] = useState('text') // 'text' or 'tree'

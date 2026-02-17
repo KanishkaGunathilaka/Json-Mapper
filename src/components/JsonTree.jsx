@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { ChevronRight, ChevronDown } from 'lucide-react'
-import './JsonTree.css'
+import '../assets/css/JsonTree.css'
 
 function JsonTree({ data, dataKey = 'root', level = 0 }) {
   const [expanded, setExpanded] = useState(level < 2) // Auto-expand first 2 levels

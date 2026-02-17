@@ -2,7 +2,7 @@ import { useState } from 'react'
 import JsonPanel from './components/JsonPanel'
 import MappingTable from './components/MappingTable'
 import ImplementationPlan from './components/ImplementationPlan'
-import './App.css'
+import './assets/css/App.css'
 
 function App() {
   const [leftJson, setLeftJson] = useState('')

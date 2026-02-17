@@ -1,5 +1,5 @@
 import { useMemo } from 'react'
-import './MappingTable.css'
+import '../assets/css/MappingTable.css'
 
 function MappingTable({ leftJson, rightJson, mappings = {}, onMappingsChange }) {
 

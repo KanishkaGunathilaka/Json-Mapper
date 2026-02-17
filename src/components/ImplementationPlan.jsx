@@ -1,7 +1,7 @@
 import { useMemo } from 'react'
 import { Copy, Check, Download } from 'lucide-react'
 import { useState } from 'react'
-import './ImplementationPlan.css'
+import '../assets/css/ImplementationPlan.css'
 
 function ImplementationPlan({ mappings, leftJson, rightJson }) {
   const [copied, setCopied] = useState(false)
